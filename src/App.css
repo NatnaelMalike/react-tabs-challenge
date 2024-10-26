@@ -1,32 +1,61 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-    margin: 20px;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  margin: 20px;
+  font-weight: 300;
 }
 
 .container {
-    width: 960px;
-    margin: 0 auto;
+  width: 960px;
+  margin: 0 auto;
 }
 /* TODO: Add css here */
-.tabs {
-
+.line-height {
+  line-height: 2;
+}
+.header {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  border: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background-color: rgb(20, 19, 18);
+  font-size: larger;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.btn:hover {
+  /* background-color: rgb(30, 29, 28); */
+  background-color: rgba(26, 155, 235, 0.789);
+  color: rgba(255, 255, 255, 1);
+}
+.btns-container {
+  display: flex;
+}
+.tab-container {
+  background-color: white;
+}
+.tab-detail {
+  width: 80%;
+  margin: 0 auto;
+  padding-block: 3rem;
 }
 
-
 @media only screen and (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
 
-    .container {
-        width: 100%;
-    }
-
-    .content {
-        padding: 50px;
-    }
+  .content {
+    padding: 50px;
+  }
 }
