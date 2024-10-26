@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TabDetail from "./TabDetail";
 import useFetchedData from "../hooks/useFetchedData";
+import TabButton from "./TabButton";
 
 const Tabs = () => {
   const tabLabels = ["Tab 1", "Tab 2", "Tab 3", "Tab 4"];
@@ -10,19 +11,18 @@ const Tabs = () => {
     <div className="container">
       <div className="btns-container">
         {tabLabels.map((label, index) => (
-          <button
+          <TabButton
             key={index}
-            className={`btn ${activeTab === index ? "active" : ""}`}
+            label={label}
+            isActive={activeTab === index}
             onClick={() => setActiveTab(index)}
-          >
-            {label}
-          </button>
+          />
         ))}
       </div>
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
-        <p>Error: {error.message}</p>
+        <p>Error: {error}</p>
       ) : (
         <TabDetail tabId={activeTab} text={data} />
       )}
